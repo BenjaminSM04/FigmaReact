@@ -1,0 +1,50 @@
+/* Tokens de diseño: paleta de "Sistemas" (variables de Figma) */
+:root {
+  /* Marca */
+  --c-primary: #548d95;
+  --c-primary-light: #76c1c3;
+  --c-primary-dark: #3b6e76;
+  --c-primary-tint: #e6f2f3;
+  /* Acento */
+  --c-gold: #ae7f21;
+  --c-gold-text: #7a5a14;
+  --c-amber: #f0ae44;
+  --c-amber-tint: #fdf1db;
+  /* Éxito */
+  --c-olive: #789342;
+  --c-lime: #b4db6f;
+  --c-success-tint: #eef6dc;
+  --c-success-text: #4f6428;
+  /* Peligro */
+  --c-danger: #b8432c;
+  --c-danger-tint: #fbe7e2;
+  /* Texto y superficies */
+  --c-text: #1e2b2e;
+  --c-text-2: #5b6b6e;
+  --c-inverse: #ffffff;
+  --c-bg: #f4f8f8;
+  --c-card: #ffffff;
+  --c-border: #d8e3e4;
+
+  --font: 'Inter Variable', 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --radius-sm: 8px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+
+  --shadow-md: 0 6px 18px rgba(30, 43, 46, 0.1);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.25);
+
+  --navbar-h: 72px;
+  --tabbar-h: 64px;
+  --content-w: 1200px;
+  --gutter: 24px;
+}
+
+@media (max-width: 767px) {
+  :root {
+    --navbar-h: 56px;
+    --gutter: 16px;
+  }
+}
