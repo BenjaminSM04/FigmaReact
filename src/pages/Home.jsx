@@ -37,7 +37,7 @@ export default function Home() {
           </h2>
           <p className="section__sub">Tres sedes pensadas para tu visita a La Paz.</p>
         </div>
-        <div className="grid grid--3">
+        <div className="grid grid--3 stagger">
           {hotels.map((h) => (
             <HotelCard key={h.id} hotel={h} priceFrom={priceFrom(rooms, h.id)} to={`/habitaciones?${searchToQuery({ ...initial, hotel: h.id })}`} />
           ))}
@@ -48,7 +48,7 @@ export default function Home() {
         <h2 id="pasos-titulo" className="section__title">
           Reserva en tres pasos
         </h2>
-        <ol className="steps">
+        <ol className="steps stagger">
           {STEPS.map(([n, title, text]) => (
             <li key={n} className="step-card">
               <span className="step-card__num">{n}</span>

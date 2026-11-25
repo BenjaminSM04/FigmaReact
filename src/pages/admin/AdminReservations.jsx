@@ -91,7 +91,7 @@ export default function AdminReservations() {
         </div>
       </header>
 
-      <div className="stats">
+      <div className="stats stagger">
         <Stat icon="calendar" tone="teal" label="Reservas activas" value={stats.active} />
         <Stat icon="chart" tone="green" label="Ocupación hoy" value={`${stats.occupancy}%`} />
         <Stat icon="bed" tone="amber" label="Habitaciones libres" value={stats.freeToday} />
@@ -137,7 +137,7 @@ export default function AdminReservations() {
             </table>
           </div>
 
-          <ul className="card-list">
+          <ul className="card-list stagger">
             {list.map((r) => (
               <li key={r.id} className="mini-card">
                 <div className="mini-card__top">

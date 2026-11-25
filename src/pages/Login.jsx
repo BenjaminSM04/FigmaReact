@@ -66,7 +66,7 @@ export default function Login() {
         <Logo light />
         <h1 className="login__headline">Tu estadía en La Paz, a un clic.</h1>
         <p className="login__sub">Reserva y cancela habitaciones en nuestros hoteles de Sopocachi, el Centro y la Zona Sur.</p>
-        <ul className="login__benefits">
+        <ul className="login__benefits stagger">
           {['Reserva en menos de un minuto', 'Cancela cuando lo necesites', 'Un solo acceso para toda la cadena'].map((t) => (
             <li key={t}>
               <span className="login__check">
