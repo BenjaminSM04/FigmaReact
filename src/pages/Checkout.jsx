@@ -104,7 +104,7 @@ export default function Checkout() {
       <div className="container page">
         <Steps current={4} />
         <div className="success">
-          <span className="success__icon">
+          <span className="success__icon" aria-hidden="true">
             <Icon name="check" size={32} />
           </span>
           <h1>¡Reserva confirmada!</h1>

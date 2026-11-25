@@ -1,4 +1,4 @@
-import { NavLink, Outlet, useNavigate } from 'react-router-dom';
+import { NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext.jsx';
 import Avatar from './Avatar.jsx';
 import Icon from './Icon.jsx';
@@ -16,6 +16,7 @@ const TABS = [...MENU, { to: '/admin/perfil', icon: 'user', label: 'Perfil' }];
 export default function AdminLayout() {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
+  const { pathname } = useLocation();
 
   const exit = () => {
     logout();
@@ -58,7 +59,9 @@ export default function AdminLayout() {
           <span className="badge">Administrador</span>
         </header>
         <main id="contenido" className="admin-layout__main">
-          <Outlet />
+          <div key={pathname} className="page-enter">
+            <Outlet />
+          </div>
         </main>
       </div>
       <TabBar items={TABS} label="Navegación móvil de administración" />

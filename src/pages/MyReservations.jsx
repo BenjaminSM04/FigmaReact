@@ -61,7 +61,7 @@ export default function MyReservations() {
           {mine.length === 0 && <Button to="/habitaciones">Buscar habitaciones</Button>}
         </div>
       ) : (
-        <div className="res-list">
+        <div className="res-list stagger">
           {visible.map((r) => (
             <ReservationCard key={r.id} reservation={r} onCancel={setTarget} />
           ))}

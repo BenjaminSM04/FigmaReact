@@ -1,4 +1,4 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import Footer from './Footer.jsx';
 import Navbar from './Navbar.jsx';
 import TabBar from './TabBar.jsx';
@@ -11,6 +11,7 @@ const TABS = [
 
 /** Estructura del área de cliente: barra superior, contenido, pie y pestañas móviles. */
 export default function AppLayout() {
+  const { pathname } = useLocation();
   return (
     <div className="app-layout">
       <a className="skip-link" href="#contenido">
@@ -18,7 +19,9 @@ export default function AppLayout() {
       </a>
       <Navbar />
       <main id="contenido" className="app-layout__main">
-        <Outlet />
+        <div key={pathname} className="page-enter">
+          <Outlet />
+        </div>
       </main>
       <Footer />
       <TabBar items={TABS} label="Navegación móvil" />

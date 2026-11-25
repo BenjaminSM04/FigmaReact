@@ -161,7 +161,7 @@ export default function Rooms() {
               )}
             </div>
           ) : (
-            <div className="results__list">
+            <div className="results__list stagger">
               {results.map((room) => (
                 <RoomCard key={room.id} room={room} hotel={getHotel(room.hotelId)} nights={search.noches} to={`/reservar/${room.id}?${searchToQuery({ ...search, hotel: room.hotelId })}`} />
               ))}
