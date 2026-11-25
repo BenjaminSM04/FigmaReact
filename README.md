@@ -54,6 +54,18 @@ pueden registrarse. Desde **Perfil** se pueden restablecer los datos de ejemplo.
   muestra como "Finalizada".
 - Precios en bolivianos (Bs). El pago se hace en el hotel.
 
+## Animaciones
+
+Los estilos de movimiento están en `src/styles/motion.css`: entrada de cada pantalla, listas que
+aparecen de forma escalonada, diálogos (cuadro en escritorio y hoja deslizante en móvil), avisos,
+confirmación de reserva con marca animada y efectos al pasar el cursor o pulsar. Si el sistema
+tiene activado "reducir movimiento", todas las animaciones se desactivan.
+
+## Prototipo en Figma
+
+El archivo de Figma incluye un prototipo con las pantallas conectadas (flujos de cliente y de
+administrador, en web y móvil): <https://www.figma.com/design/X69QM8yvl0IxEEvuPVTdwr>
+
 ## Estructura
 
 ```
@@ -63,7 +75,7 @@ src/
   data/         Hoteles, habitaciones y datos de ejemplo (las fechas son relativas a hoy)
   lib/          Formato de fechas y precios, reglas de reservas (con pruebas), búsqueda
   pages/        Pantallas del cliente y, en pages/admin, las del administrador
-  styles/       Tokens de diseño (colores de Figma) y estilos
+  styles/       Tokens de diseño (colores de Figma), estilos y animaciones
 ```
 
 ## Diseño adaptable
